@@ -2,10 +2,10 @@
 
 ### Requisites
 
-- I use these files in **nvim**, but it should work fine in **vim** too. _With excetion of **Coc.nvim**_
+- I use these files in **nvim**, but it should work fine in **vim** too. _With exception of **Coc.nvim**_
 - You will need use Plug-vim to install plugins.
 - If you will use this to code, use ```:checkhealth```, to see if node and python are configured
-- If you want to have font ligatures, check that your terminal supports.
+- If you want to have font ligatures, check if your terminal supports.
 
 ### Configuration
 
@@ -25,4 +25,4 @@
 
 ### Getting help
 
-If you have any problem with this configuration you can read documentations of Plugins
+If you have any problem with this configuration you can read the documentations of Plugins
