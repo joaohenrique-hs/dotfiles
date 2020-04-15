@@ -1,5 +1,7 @@
 # dotfiles
 
+![Captura de Tela_20200414205327](https://user-images.githubusercontent.com/53794049/79288223-8d5e8000-7e9c-11ea-92e6-29dbb1ff83b6.png)
+
 ### Requisites
 
 - I use these files in **nvim**, but it should work fine in **vim** too. _With exception of **Coc.nvim**_
