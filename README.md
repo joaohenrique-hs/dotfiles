@@ -1,5 +1,7 @@
 # dotfiles
 
+## NVIM
+
 ![Captura de Tela_20200414205327](https://user-images.githubusercontent.com/53794049/79288223-8d5e8000-7e9c-11ea-92e6-29dbb1ff83b6.png)
 
 ### Requisites
@@ -11,7 +13,7 @@
 
 ### Configuration
 
-1. In your ``` ~/.config/nvim ```, clone this repository.
+1. In your ``` ~/.config/nvim ```, copy nvim repository from here.
 2. Inside your nvim use command ``` :PlugInstall ```.
 3. Yet in nvim use command ``` :CocInstall coc-tsserver coc-eslint coc-json coc-prettier coc-css ```.
 
@@ -28,3 +30,5 @@
 ### Getting help
 
 If you have any problem with this configuration you can read the documentations of Plugins
+
+## ZSH
