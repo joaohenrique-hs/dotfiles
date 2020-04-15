@@ -32,3 +32,5 @@
 If you have any problem with this configuration you can read the documentations of Plugins
 
 ## ZSH
+
+## KITTY
