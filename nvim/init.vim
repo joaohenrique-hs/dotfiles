@@ -10,7 +10,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 
-" Indent
+" Format
 Plug 'Yggdroot/indentLine'
 
 " NerdTree
@@ -24,6 +24,16 @@ Plug 'tomasr/molokai'
 " Images
 Plug 'ashisha/image.vim'
 
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" Prettier
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+" Ctrl + D
+Plug 'tpope/vim-abolish'
+
 call plug#end()
 
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -33,9 +43,19 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 
 au BufRead *.png,*.jpg,*.jpeg :call DisplayImage()
 
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+inoremap <silent><expr> <c-space> coc#refresh()
+
 map <C-n> :NERDTreeToggle<CR>
 
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+let g:prettier#autoformat_require_pragma = 0
 
 let g:quantum_italics=1
 
@@ -43,7 +63,11 @@ let g:indentLine_char = '▏'
 
 let g:mapleader = ","
 
+set signcolumn=yes
+
 set termguicolors
+
+set updatetime=500
 
 colorscheme dracula 
 
