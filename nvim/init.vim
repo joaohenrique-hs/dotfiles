@@ -28,10 +28,9 @@ Plug 'airblade/vim-gitgutter'
 " Prettier
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
-" Ctrl + D
-" Plug 'tpope/vim-abolish'
-
 call plug#end()
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -39,6 +38,16 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | wincmd p | ene | exe 'NERDTree' argv()[0] | endif
 
 au BufRead *.png,*.jpg,*.jpeg :call DisplayImage()
+
+" coc packages
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint',
+  \ 'coc-prettier',
+  \ 'coc-json',
+  \]
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -68,6 +77,11 @@ map <C-n> :NERDTreeToggle<CR>
 
 nmap <F2> <Plug>(coc-rename)
 
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 let g:prettier#autoformat_require_pragma = 0
 
 let g:quantum_italics=1
@@ -76,11 +90,13 @@ let g:indentLine_char = '▏'
 
 let g:mapleader = ","
 
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
 set signcolumn=yes
 
 set termguicolors
 
-set updatetime=500
+set updatetime=300
 
 colorscheme dracula 
 
