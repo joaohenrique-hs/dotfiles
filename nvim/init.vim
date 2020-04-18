@@ -28,6 +28,9 @@ Plug 'airblade/vim-gitgutter'
 " Prettier
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
+" Fuzzy files
+Plug 'ctrlpvim/ctrlp.vim'
+
 call plug#end()
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -90,13 +93,16 @@ let g:indentLine_char = '▏'
 
 let g:mapleader = ","
 
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+let g:NERDTreeIgnore = ['^node_modules$', '\.git$[[dir]]']
+
+" ctrlp ignore
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 set signcolumn=yes
 
 set termguicolors
 
-set updatetime=300
+set updatetime=200
 
 colorscheme dracula 
 
@@ -112,7 +118,4 @@ set winbl=10
 
 " Remove bookmarks and help text from NERDTree
 let g:NERDTreeMinimalUI = 1
-
-" Hide certain files and directories from NERDTree
-let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '\.git$[[dir]]', '\.idea$[[dir]]', '\.sass-cache$']
 
