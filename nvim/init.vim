@@ -8,7 +8,7 @@ Plug 'ryanoasis/vim-devicons'
 
 " intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs' Coc-pairs solve this problem
 
 " Format
 Plug 'Yggdroot/indentLine'
@@ -21,9 +21,6 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tomasr/molokai'
 
-" Images
-Plug 'ashisha/image.vim'
-
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -32,7 +29,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Ctrl + D
-Plug 'tpope/vim-abolish'
+" Plug 'tpope/vim-abolish'
 
 call plug#end()
 
@@ -54,11 +51,22 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
 inoremap <silent><expr> <c-space> coc#refresh()
 
 map <C-n> :NERDTreeToggle<CR>
 
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
+nmap <F2> <Plug>(coc-rename)
 
 let g:prettier#autoformat_require_pragma = 0
 
