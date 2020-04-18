@@ -31,6 +31,9 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Fuzzy files
 Plug 'ctrlpvim/ctrlp.vim'
 
+" Commenter
+Plug 'scrooloose/nerdcommenter'
+
 call plug#end()
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -77,6 +80,8 @@ endfunction
 inoremap <silent><expr> <c-space> coc#refresh()
 
 map <C-n> :NERDTreeToggle<CR>
+vmap ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggle
 
 nmap <F2> <Plug>(coc-rename)
 
