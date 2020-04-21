@@ -34,6 +34,10 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Commenter
 Plug 'scrooloose/nerdcommenter'
 
+" Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -99,6 +103,10 @@ let g:indentLine_char = '▏'
 let g:mapleader = ","
 
 let g:NERDTreeIgnore = ['^node_modules$', '\.git$[[dir]]']
+
+let g:airline_theme='dracula'
+
+let g:airline_powerline_fonts = 1
 
 " ctrlp ignore
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
