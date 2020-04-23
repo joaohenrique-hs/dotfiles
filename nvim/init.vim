@@ -25,9 +25,6 @@ Plug 'tomasr/molokai'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-" Prettier
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
 " Fuzzy files
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -55,7 +52,6 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-tsserver',
   \ 'coc-eslint',
-  \ 'coc-prettier',
   \ 'coc-json',
   \]
 
@@ -69,6 +65,8 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+let g:prettier#autoformat_require_pragma = 0
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -93,8 +91,6 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-let g:prettier#autoformat_require_pragma = 0
 
 let g:quantum_italics=1
 
