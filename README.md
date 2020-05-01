@@ -27,10 +27,10 @@
 |   Icons   | Icons of file extensions |
 | AutoPairs | Autocomplete _( [ { ' "_ |
 
-### Getting help
-
-If you have any problem with this configuration you can read the documentations of Plugins
-
 ## ZSH
 
-## KITTY
+## Simple Terminal (Coming soon)
+
+### Getting help
+
+If you have any problem with this configuration you can read the Plugin documentations or open an issue
