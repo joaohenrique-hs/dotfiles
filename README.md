@@ -19,7 +19,7 @@
 
 ### Main features
 
-|   Plugin  |         Function         |
+|   Plugin  |          Feature         |
 |:---------:|:------------------------:|
 |  NERDTree |    Fast file explorer    |
 |  Coc.nvim |       intellisense       |
@@ -27,9 +27,25 @@
 |   Icons   | Icons of file extensions |
 | AutoPairs | Autocomplete _( [ { ' "_ |
 
-## ZSH
+## Simple Terminal
 
-## Simple Terminal (Coming soon)
+Simple terminal is a **minimalist** terminal emulator. More information in https://st.suckless.org/
+
+1. Clone st
+
+```git clone https://git.suckless.org/st```
+
+2. So apply patch using
+
+```git apply /path/to/patch.patch```
+
+3. **You need to rename ```config.def.h``` to ```config.h```.**
+
+4. Then run: 
+
+```make && sudo make install```.
+
+## ZSH
 
 ### Getting help
 
