@@ -35,6 +35,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Centralize view
+Plug 'junegunn/goyo.vim'
+
 call plug#end()
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -82,6 +85,8 @@ endfunction
 inoremap <silent><expr> <c-space> coc#refresh()
 
 map <C-n> :NERDTreeToggle<CR>
+map <leader>g :Goyo<CR>
+
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
@@ -95,8 +100,6 @@ nmap <silent> gr <Plug>(coc-references)
 let g:quantum_italics=1
 
 let g:indentLine_char = '▏'
-
-let g:mapleader = ","
 
 let g:NERDTreeIgnore = ['^node_modules$', '\.git$[[dir]]']
 
