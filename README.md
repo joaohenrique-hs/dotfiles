@@ -47,6 +47,11 @@ Simple terminal is a **minimalist** terminal emulator. More information in https
 
 ```make && sudo make install```.
 
+### Features
+- Dracula Theme
+- Scrollback
+- Vim shortcuts
+
 ## ZSH
 
 ### Getting help
