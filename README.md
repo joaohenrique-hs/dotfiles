@@ -2,7 +2,7 @@
 
 ## NVIM
 
-![Captura de Tela_20200421185758](https://user-images.githubusercontent.com/53794049/79918034-052f2c00-8402-11ea-9031-b74266ebcc43.png)
+![2020-05-06-23:52:00-scrot](https://user-images.githubusercontent.com/53794049/81249339-ba620680-8ff4-11ea-9422-f5d8efdddc51.png)
 
 ### Requisites
 
