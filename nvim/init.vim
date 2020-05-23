@@ -59,6 +59,7 @@ let g:coc_global_extensions = [
   \ 'coc-clangd',
   \ 'coc-markdownlint',
   \ 'coc-python',
+  \ 'coc-yaml',
   \]
 
 inoremap <silent><expr> <TAB>
