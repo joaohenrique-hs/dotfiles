@@ -41,6 +41,9 @@ Plug 'junegunn/goyo.vim'
 " Database Accesss
 Plug 'tpope/vim-dadbod'
 
+" Hex colors
+Plug 'gko/vim-coloresque'
+
 call plug#end()
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -113,6 +116,10 @@ let g:NERDTreeIgnore = ['^node_modules$', '\.git$[[dir]]']
 let g:airline_theme='dracula'
 
 let g:airline_powerline_fonts = 1
+
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+
+let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 
 " ctrlp ignore
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
