@@ -38,6 +38,9 @@ Plug 'vim-airline/vim-airline-themes'
 " Centralize view
 Plug 'junegunn/goyo.vim'
 
+" Database Accesss
+Plug 'tpope/vim-dadbod'
+
 call plug#end()
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
