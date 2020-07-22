@@ -15,7 +15,7 @@
 
 1. In your ``` ~/.config/nvim ```, copy nvim repository from here.
 2. Inside your nvim use command ``` :PlugInstall ```.
-3. Yet in nvim use command ``` :CocInstall coc-tsserver coc-eslint coc-json coc-prettier coc-css ```.
+3. Yet in nvim use command ```:CocInstall```.
 
 ### Main features
 
@@ -37,13 +37,17 @@ Simple terminal is a **minimalist** terminal emulator. More information in https
 
 ```git clone https://git.suckless.org/st```
 
-2. So apply patch using
+2. Install Harfbuzz lib (to font ligatures)
+
+```sudo pacman -S harfbuzz```
+
+3. So apply patch using
 
 ```git apply /path/to/patch.patch```
 
-3. **You need to rename ```config.def.h``` to ```config.h```.**
+4. **You need to rename ```config.def.h``` to ```config.h```.**
 
-4. Then run: 
+5. Then run: 
 
 ```make && sudo make install```.
 
@@ -51,6 +55,8 @@ Simple terminal is a **minimalist** terminal emulator. More information in https
 - Dracula Theme
 - Scrollback
 - Vim shortcuts
+- Font Ligatures
+- Emoji suport
 
 ## ZSH
 
