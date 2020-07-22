@@ -2,7 +2,9 @@
 
 ## NVIM
 
-![2020-05-06-23:52:00-scrot](https://user-images.githubusercontent.com/53794049/81249339-ba620680-8ff4-11ea-9422-f5d8efdddc51.png)
+![2020-07-22-15:03:57-scrot](https://user-images.githubusercontent.com/53794049/88214114-03a71700-cc30-11ea-941a-31f893a2f93e.png)
+
+![2020-07-22-15:10:08-scrot](https://user-images.githubusercontent.com/53794049/88214053-ef631a00-cc2f-11ea-8637-ec37533d2c7c.png)
 
 ### Requisites
 
