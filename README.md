@@ -31,7 +31,9 @@
 
 Simple terminal is a **minimalist** terminal emulator. More information in https://st.suckless.org/
 
-![2020-05-03-15:32:53-scrot](https://user-images.githubusercontent.com/53794049/80922466-ac418b00-8d53-11ea-91ba-fed6fa06e76d.png)
+![2020-07-22-15:19:25-scrot](https://user-images.githubusercontent.com/53794049/88213491-3270bd80-cc2f-11ea-9ae9-6a8d486a31fa.png)
+
+![2020-07-22-15:20:45-scrot](https://user-images.githubusercontent.com/53794049/88213744-854a7500-cc2f-11ea-96c3-78a1366c3c0a.png)
 
 1. Clone st
 
