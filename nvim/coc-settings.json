@@ -1,4 +1,8 @@
 {
+  "editor.codeActionOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["css", "json", "javascript", "javascriptreact", "typescript", "typescriptreact"],
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
   "eslint.autoFixOnSave": true,

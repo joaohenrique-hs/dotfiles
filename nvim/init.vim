@@ -10,8 +10,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'jiangmiao/auto-pairs' Coc-pairs solve this problem
 
-" Format
+" Format / editorconfig
 Plug 'Yggdroot/indentLine'
+Plug 'editorconfig/editorconfig-vim'
 
 " NerdTree
 Plug 'preservim/nerdtree'
@@ -66,6 +67,9 @@ let g:coc_global_extensions = [
   \ 'coc-markdownlint',
   \ 'coc-python',
   \ 'coc-yaml',
+  \ 'coc-emmet',
+  \ 'coc-css',
+  \ 'coc-prettier',
   \]
 
 inoremap <silent><expr> <TAB>
@@ -78,8 +82,6 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-let g:prettier#autoformat_require_pragma = 0
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -99,6 +101,9 @@ map <leader>g :Goyo<CR>
 
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
+
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
 nmap <F2> <Plug>(coc-rename)
 
@@ -131,6 +136,10 @@ set termguicolors
 set updatetime=200
 
 colorscheme dracula 
+
+set encoding=UTF-8
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 set number
 set ruler
