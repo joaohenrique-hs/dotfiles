@@ -8,6 +8,7 @@ Plug 'ryanoasis/vim-devicons'
 
 " intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 "Plug 'jiangmiao/auto-pairs' Coc-pairs solve this problem
 
 " Format / editorconfig
@@ -70,6 +71,7 @@ let g:coc_global_extensions = [
   \ 'coc-emmet',
   \ 'coc-css',
   \ 'coc-prettier',
+  \ 'coc-stylelint',
   \]
 
 inoremap <silent><expr> <TAB>
@@ -111,6 +113,21 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 let g:quantum_italics=1
 

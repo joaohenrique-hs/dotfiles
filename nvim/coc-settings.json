@@ -2,14 +2,30 @@
   "editor.codeActionOnSave": {
     "source.fixAll.eslint": true
   },
-  "coc.preferences.formatOnSaveFiletypes": ["css", "json", "javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "json",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
   "eslint.autoFixOnSave": true,
   "typescript.validate.enable": true,
-  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
+  "snippets.extends": {
+    "javascript": ["typescript"],
+    "javascriptreact": ["typescriptreact", "javascript"]
+  },
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
   "diagnostic.infoSign": "•"
 }
-
