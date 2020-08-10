@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/bundle')
 
-" Plugins
+" Indenter
 Plug 'sheerun/vim-polyglot'
 
 " Icons
@@ -8,20 +8,24 @@ Plug 'ryanoasis/vim-devicons'
 
 " intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-"Plug 'jiangmiao/auto-pairs' Coc-pairs solve this problem
+"Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jiangmiao/auto-pairs' "Coc-pairs solve this problem
 
 " Format / editorconfig
 Plug 'Yggdroot/indentLine'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'alvan/vim-closetag'
+
+" Multiple cursors
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " NerdTree
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Themes
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'tomasr/molokai'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -42,6 +46,7 @@ Plug 'junegunn/goyo.vim'
 
 " Database Accesss
 Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
 
 " Hex colors
 Plug 'gko/vim-coloresque'
@@ -55,12 +60,21 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | wincmd p | ene | exe 'NERDTree' argv()[0] | endif
 
-au BufRead *.png,*.jpg,*.jpeg :call DisplayImage()
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+    \ "Modified"  : "*",            
+    \ "Staged"    : "•",            
+    \ "Untracked" : "+",            
+    \ "Dirty"     : "⁖",            
+    \ "Clean"     : "✅",                   
+    \ 'Unknown'   :'?',
+    \ }
+
+let g:NERDTreeGitStatusShowIgnored = 1
 
 " coc packages
 let g:coc_global_extensions = [
   \ 'coc-snippets',
-  \ 'coc-pairs',
+  "\ 'coc-pairs',
   \ 'coc-tsserver',
   \ 'coc-eslint',
   \ 'coc-json',
@@ -73,6 +87,20 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-stylelint',
   \]
+
+let g:VM_maps = {}
+let g:VM_maps['Find Under']         = '<C-d>'           " replace C-n
+let g:VM_maps['Find Subword Under'] = '<C-d>'           " replace visual C-n
+
+let NERDTreeWinPos=1
+
+let NERDTreeAutoDeleteBuffer = 1
+
+nnoremap <silent> <Leader>t :NERDTreeFocus<CR>
+
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.tsx,*.jsx'
+
+let g:closetag_emptyTags_caseSensitive = 1
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
