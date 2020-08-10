@@ -22,10 +22,10 @@
     "typescript.tsx"
   ],
   "snippets.extends": {
-    "javascript": ["typescript"],
     "javascriptreact": ["typescriptreact", "javascript"]
   },
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
-  "diagnostic.infoSign": "•"
+  "diagnostic.infoSign": "•",
+  "prettier.singleQuote": true
 }
