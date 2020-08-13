@@ -23,7 +23,6 @@
 
 |      Plugin      |           Feature          |
 |:----------------:|:--------------------------:|
-
 |   coc-explorer   |     Fast file explorer     |
 |   vim-floaterm   |     Integrated terminal    |
 |     vim-clap     |        Search window       |
