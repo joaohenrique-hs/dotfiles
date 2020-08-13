@@ -73,6 +73,8 @@ Simple terminal is a **minimalist** terminal emulator. More information in https
 
 ## ZSH
 
+![ZSH-Image](https://user-images.githubusercontent.com/53794049/90188296-94859400-dd91-11ea-9d20-9b110578dd67.png)
+
 ### Getting help
 
 If you have any problem with this configuration you can read the Plugin documentations or open an issue 😉
