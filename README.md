@@ -2,9 +2,10 @@
 
 ## NVIM
 
-![2020-07-22-15:03:57-scrot](https://user-images.githubusercontent.com/53794049/88214114-03a71700-cc30-11ea-941a-31f893a2f93e.png)
+![NeovimImage](https://user-images.githubusercontent.com/53794049/90187206-ca297d80-dd8f-11ea-95e1-1ac5266948ce.png)
 
-![2020-07-22-15:10:08-scrot](https://user-images.githubusercontent.com/53794049/88214053-ef631a00-cc2f-11ea-8637-ec37533d2c7c.png)
+![NeovimImage2](https://user-images.githubusercontent.com/53794049/90187571-63589400-dd90-11ea-85e4-a2f6cb804281.png)
+
 
 ### Requirements
 
@@ -41,25 +42,25 @@
 
 Simple terminal is a **minimalist** terminal emulator. More information in https://st.suckless.org/
 
-![2020-07-22-15:19:25-scrot](https://user-images.githubusercontent.com/53794049/88213491-3270bd80-cc2f-11ea-9ae9-6a8d486a31fa.png)
+![2020-07-22-15:16:00-scrot](https://user-images.githubusercontent.com/53794049/90187775-ba5e6900-dd90-11ea-8ebc-a0ae7404c378.png)
 
 ![2020-07-22-15:20:45-scrot](https://user-images.githubusercontent.com/53794049/88213744-854a7500-cc2f-11ea-96c3-78a1366c3c0a.png)
 
-1. Clone st
+#### 1. Clone st:
 
 ```git clone https://git.suckless.org/st```
 
-2. Install Harfbuzz lib (to font ligatures)
+#### 2. Install Harfbuzz lib (to font ligatures):
 
 ```sudo pacman -S harfbuzz```
 
-3. So apply patch using
+#### 3. So apply patch using:
 
 ```git apply /path/to/patch.patch```
 
-4. **You need to rename ```config.def.h``` to ```config.h```.**
+#### 4. You need to rename ```config.def.h``` to ```config.h```.
 
-5. Then run: 
+#### 5. Then run: 
 
 ```make && sudo make install```.
 
@@ -74,4 +75,4 @@ Simple terminal is a **minimalist** terminal emulator. More information in https
 
 ### Getting help
 
-If you have any problem with this configuration you can read the Plugin documentations or open an issue
+If you have any problem with this configuration you can read the Plugin documentations or open an issue 😉
