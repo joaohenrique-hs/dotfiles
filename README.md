@@ -6,11 +6,11 @@
 
 ![2020-07-22-15:10:08-scrot](https://user-images.githubusercontent.com/53794049/88214053-ef631a00-cc2f-11ea-8637-ec37533d2c7c.png)
 
-### Requisites
+### Requirements
 
-- I use these files in **nvim**, but it should work fine in **vim** too. _With exception of **Coc.nvim**_
-- You will need use Plug-vim to install plugins.
-- If you will use this to code, use ```:checkhealth```, to see if node and python are configured
+- I use these files in **nvim**, but it should work fine in **vim** too.
+- You will need to use Plug-vim to install plugins.
+- If you will use this to code, use ```:checkhealth```, to see if nvim providers are correctly configured
 - If you want to have font ligatures, check if your terminal supports.
 
 ### Configuration
@@ -21,13 +21,22 @@
 
 ### Main features
 
-|   Plugin  |          Feature         |
-|:---------:|:------------------------:|
-|  NERDTree |    Fast file explorer    |
-|  Coc.nvim |       intellisense       |
-|  Dracula  |      Beautiful theme     |
-|   Icons   | Icons of file extensions |
-| AutoPairs | Autocomplete _( [ { ' "_ |
+|      Plugin      |           Feature          |
+|:----------------:|:--------------------------:|
+
+|   coc-explorer   |     Fast file explorer     |
+|   vim-floaterm   |     Integrated terminal    |
+|     vim-clap     |        Search window       |
+|   vim-startify   |        Welcome page        |
+|    indentLine    |      Indentation lines     |
+|   editorconfig   | Read of .editorconfig file |
+| vim-visual-multi |      Multiple cursors      |
+|   nerdcommenter  |          Commenter         |
+|    vim-airline   |         Status bar         |
+|    vim-dadbod    |     Connect to database    |
+|   vim-css-color  |    Highlight hexa colors   |
+|     coc.nvim     |        Intellisense        |
+|    auto-pairs    |  Autocomplete _( [ { ' "_  |
 
 ## Simple Terminal
 
