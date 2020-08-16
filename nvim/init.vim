@@ -1,7 +1,13 @@
 call plug#begin('~/.config/nvim/bundle')
 
+" Start Scree
+Plug 'mhinz/vim-startify'
+
 " Indenter
 Plug 'sheerun/vim-polyglot'
+
+" Icons
+Plug 'ryanoasis/vim-devicons'
 
 " Floating windows
 Plug 'voldikss/vim-floaterm'
@@ -10,7 +16,7 @@ Plug 'liuchengxu/vim-clap'
 
 " intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jiangmiao/auto-pairs'
 
 " Format / editorconfig
@@ -164,9 +170,34 @@ nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Vim Clap
 nmap <c-p> :Clap files<CR>
 nmap <c-c> :Clap yanks<CR>
+nmap <c-g> :Clap grep<CR>
 
 " Floating windows
 let g:floaterm_keymap_toggle = '<c-t>'
+
+" Starting
+
+let g:startify_custom_header = [
+      \ '       _  __     _         __  ___         __ ',
+      \ '      / |/ /  __(_)_ _    /  |/  /__ _____/ / ',
+      \ '     /    / |/ / /  ` \  / /|_/ / _ `/ __/ _ \',
+      \ '    /_/|_/|___/_/_/_/_/ /_/  /_/\_,_/\__/_//_/',
+      \]
+
+let g:startify_lists = [
+      \ { 'type': 'files', 'header': ['   Files'] },
+      \]
+
+let g:startify_session_autoload = 1
+let g:startify_session_delete_buffers = 1
+let g:startify_change_to_vcs_root = 1
+let g:startify_fortune_use_unicode = 1
+let g:startify_session_persistence = 1
+
+let g:webdevicons_enable_startify = 1
+
+let g:startify_enable_special = 0
+
 
 " General config
 let g:quantum_italics=1
