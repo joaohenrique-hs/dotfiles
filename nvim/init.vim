@@ -20,7 +20,7 @@ Plug 'liuchengxu/vim-clap'
 
 " intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+"Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jiangmiao/auto-pairs'
 
 " Format / editorconfig
@@ -223,6 +223,8 @@ set updatetime=200
 colorscheme dracula 
 
 set encoding=UTF-8
+
+set scrolloff=12
 
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
