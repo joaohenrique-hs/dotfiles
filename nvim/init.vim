@@ -9,6 +9,10 @@ Plug 'sheerun/vim-polyglot'
 " Icons
 Plug 'ryanoasis/vim-devicons'
 
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
 " Floating windows
 Plug 'voldikss/vim-floaterm'
 
